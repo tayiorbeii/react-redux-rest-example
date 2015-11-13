@@ -1,0 +1,71 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "Based on https://github.com/davezuko/react-redux-starter-kit and the Redux docs",
+  "main": "index.js",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "dotenv": "^1.2.0",
+    "history": "^1.9.0",
+    "isomorphic-fetch": "^2.2.0",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-redux": "^4.0.0",
+    "react-router": "1.0.0-rc1",
+    "redux": "^3.0.0",
+    "redux-router": "^1.0.0-beta3",
+    "redux-thunk": "^1.0.0",
+    "request-promise": "^1.0.2",
+    "yargs": "^3.18.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "autoprefixer-loader": "^3.1.0",
+    "babel-eslint": "^4.1.1",
+    "babel-loader": "^5.0.0",
+    "babel-plugin-react-transform": "^1.1.0",
+    "babel-runtime": "^5.8.20",
+    "css-loader": "^0.21.0",
+    "eslint": "^1.0.0",
+    "eslint-config-airbnb": "0.1.0",
+    "eslint-plugin-react": "^3.3.1",
+    "extract-text-webpack-plugin": "^0.8.0",
+    "file-loader": "^0.8.4",
+    "html-webpack-plugin": "^1.6.1",
+    "json-loader": "^0.5.3",
+    "node-sass": "^3.3.3",
+    "react-addons-test-utils": "^0.14.0",
+    "react-transform-catch-errors": "^1.0.0",
+    "react-transform-hmr": "^1.0.0",
+    "redbox-react": "^1.0.4",
+    "redux-devtools": "3.0.0-beta-3",
+    "redux-devtools-dock-monitor": "^1.0.0-beta-3",
+    "redux-devtools-log-monitor": "^1.0.0-beta-3",
+    "sass-loader": "^3.0.0",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "lint": "eslint ./src/**/*.js",
+    "compile": "webpack",
+    "start": "npm run dev",
+    "dev": "NODE_ENV=development node --harmony bin/webpack-dev-server",
+    "dev:nw": "npm run dev -- --nw",
+    "dev:no-debug": "npm run dev -- --no_debug",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm run lint && npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}

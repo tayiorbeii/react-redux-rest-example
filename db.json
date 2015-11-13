@@ -1,0 +1,28 @@
+{
+  "athletes": [
+    {
+      "id": 0,
+      "first_name": "Bo",
+      "last_name": "Jackson",
+      "city": "Oakland",
+      "state": "California",
+      "weapon": "bat"
+    },
+    {
+      "id": 1,
+      "first_name": "Michael",
+      "last_name": "Jordan",
+      "city": "Chicago",
+      "state": "Illinois",
+      "weapon": "balls"
+    },
+    {
+      "id": 2,
+      "first_name": "Wayne",
+      "last_name": "Gretzky",
+      "city": "Los Angeles",
+      "state": "California",
+      "weapon": "hockey stick"
+    }
+  ]
+}
