@@ -34,7 +34,9 @@ export class AthleteView extends Component {
 
   }
 
+  // This method doesn't seem to be called ever...
   componentWillReceiveProps(nextProps) {
+    console.log('Ath View ComponentWillReceiveProps')
     if (nextProps !== this.props) {
       const { dispatch } = nextProps
       dispatch(fetchAthletesIfNeeded())

@@ -3,7 +3,6 @@ import fetch from 'isomorphic-fetch'
 export const REQUEST_ATHLETES = 'REQUEST_ATHLETES'
 export const RECEIVE_ATHLETES = 'RECEIVE_ATHLETES'
 
-let rp = require('request-promise');
 
 function requestAthletes(){
   return {
@@ -20,10 +19,6 @@ function receiveAthletes(json) {
 }
 
 export function fetchAthletes() {
-  let reqOptions = {
-    url: 'http://localhost:4000/athletes',
-    json: true
-  };
 
   return dispatch => {
     dispatch(requestAthletes())
@@ -38,11 +33,8 @@ function shouldFetchAthletes(state) {
   console.trace()
 
   const athletes = state.athletes.items
-  if (!athletes) {
-    return true
-  } else {
-    return false
-  }
+  
+  return !athletes
 }
 
 export function fetchAthletesIfNeeded() {
