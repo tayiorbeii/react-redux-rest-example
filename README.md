@@ -1,4 +1,4 @@
-Loosely based on https://github.com/davezuko/react-redux-starter-kit
+~~Loosely based~~ Built upon [@davezuko's kit](https://github.com/davezuko/react-redux-starter-kit) in combination with the official Redux docs.
 ## Mock API
 For development purposes, a mock REST API server can be run using json-server.
 
