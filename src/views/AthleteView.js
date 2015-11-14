@@ -3,12 +3,8 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { Router, Route, Link } from 'react-router'
 import { pushState } from 'redux-router'
-import { requestAthletes, receiveAthletes, fetchAthletes, fetchAthletesIfNeeded } from '../actions/actions'
+import * as athleteActions from '../actions/actions'
 import Athlete from '../components/Athlete'
-
-const actionCreators = {
-  fetchAthletes: () => ({ type : 'REQUEST_ATHLETES' })
-};
 
 const mapStateToProps = (state) => ({
   athletes : state.athletes.items,
@@ -16,12 +12,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  actions : bindActionCreators(actionCreators, dispatch)
+  actions : bindActionCreators(athleteActions, dispatch)
 })
-
-function loadData() {
-  fetchAthletesIfNeeded()
-}
 
 export class AthleteView extends Component {
   constructor(props){
@@ -30,7 +22,7 @@ export class AthleteView extends Component {
 
   componentDidMount() {
     console.log('Mounted an AthleteView')
-    console.log('size of athlete array after component mount:' + this.props.athletes.length) 
+    console.log('size of athlete array after component mount:' + this.props.athletes.length)
 
   }
 
@@ -38,8 +30,7 @@ export class AthleteView extends Component {
   componentWillReceiveProps(nextProps) {
     console.log('Ath View ComponentWillReceiveProps')
     if (nextProps !== this.props) {
-      const { dispatch } = nextProps
-      dispatch(fetchAthletesIfNeeded())
+      this.props.actions.fetchAthletesIfNeeded()
     }
   }
 
@@ -47,7 +38,7 @@ export class AthleteView extends Component {
     console.log('Component Will Mount')
     if (this.props.athletes.length === 0) {
       console.log('Atheletes array is empty, we should fetch data')
-      loadData()
+      this.props.actions.fetchAthletesIfNeeded()
     }
     //console.log('Component will mount props:' + JSON.stringify(this.props, null, 2))
   }

@@ -33,8 +33,8 @@ function shouldFetchAthletes(state) {
   console.trace()
 
   const athletes = state.athletes.items
-  
-  return !athletes
+
+  return !athletes.length
 }
 
 export function fetchAthletesIfNeeded() {
@@ -44,4 +44,3 @@ export function fetchAthletesIfNeeded() {
     }
   }
 }
-
